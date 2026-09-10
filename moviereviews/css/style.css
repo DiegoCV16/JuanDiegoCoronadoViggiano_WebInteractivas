@@ -1,0 +1,242 @@
+:root {
+  --mr-bg: #12141c;
+  --mr-navbar: #14161f;
+  --mr-card: #ffffff;
+  --mr-accent: #2f6feb;
+  --mr-accent-dark: #1f4fb8;
+  --mr-star: #f5b301;
+  --mr-danger: #e5484d;
+  --mr-page-bg: #f4f5f7;
+}
+
+body {
+  background-color: var(--mr-page-bg);
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ---------- Navbar ---------- */
+.mr-navbar {
+  background-color: var(--mr-navbar);
+}
+
+.mr-navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.mr-navbar .navbar-brand .mr-brand-highlight {
+  color: var(--mr-accent);
+}
+
+.mr-navbar .nav-link {
+  color: #d7d9e2 !important;
+}
+
+.mr-navbar .nav-link.active {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+#mr-search {
+  max-width: 220px;
+}
+
+/* ---------- Hero / title ---------- */
+.mr-hero-title {
+  font-weight: 700;
+}
+
+.mr-hero-title .mr-highlight {
+  color: var(--mr-accent);
+}
+
+.mr-hero-subtitle {
+  color: #6c7280;
+}
+
+/* ---------- Filter buttons ---------- */
+.mr-filter-btn {
+  border-radius: 999px;
+  border: 1px solid #d7d9e2;
+  background: #fff;
+  color: #444;
+  padding: 0.35rem 1rem;
+  font-size: 0.9rem;
+}
+
+.mr-filter-btn.active,
+.mr-filter-btn:hover {
+  background: var(--mr-accent);
+  border-color: var(--mr-accent);
+  color: #fff;
+}
+
+/* ---------- Movie card ---------- */
+.mr-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--mr-card);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.mr-card-poster-wrap {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: #dfe1e6;
+}
+
+.mr-card-poster-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mr-fav-toggle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(20, 22, 31, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.mr-fav-toggle.is-fav {
+  color: var(--mr-danger);
+}
+
+.mr-card-body {
+  padding: 0.85rem 1rem 1rem;
+}
+
+.mr-card-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mr-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #6c7280;
+  margin-bottom: 0.35rem;
+}
+
+.mr-card-meta .mr-rating {
+  color: #b8860b;
+  font-weight: 600;
+}
+
+.mr-stars {
+  color: var(--mr-star);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+}
+
+.mr-stars .bi-star {
+  color: #d9dbe1;
+}
+
+.mr-btn-primary {
+  background: var(--mr-accent);
+  border-color: var(--mr-accent);
+}
+
+.mr-btn-primary:hover {
+  background: var(--mr-accent-dark);
+  border-color: var(--mr-accent-dark);
+}
+
+/* ---------- Modal favoritos ---------- */
+.mr-fav-item img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.mr-fav-empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #8a8f9c;
+}
+
+.mr-fav-empty i {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Detail page ---------- */
+.mr-detail-poster {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.mr-metascore-track {
+  background: #e3e5ea;
+  border-radius: 4px;
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mr-metascore-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.mr-metascore-fill.mr-score-good { background: #2ecc71; }
+.mr-metascore-fill.mr-score-mid { background: #f1c40f; }
+.mr-metascore-fill.mr-score-low { background: #e74c3c; }
+
+.mr-badge {
+  background: #eef1fb;
+  color: var(--mr-accent-dark);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  margin: 0 0.35rem 0.35rem 0;
+  display: inline-block;
+}
+
+.mr-info-label {
+  color: #8a8f9c;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.mr-info-value {
+  font-weight: 600;
+}
+
+.mr-external-link {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+/* ---------- Spinner / errors ---------- */
+.mr-state-box {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6c7280;
+}
